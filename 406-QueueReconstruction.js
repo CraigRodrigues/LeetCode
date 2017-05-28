@@ -7,9 +7,7 @@ const reconstructQueue = (people) => {
 
   let results = []
   // Stable sort people array
-  people.sort((a, b) => b[0] > a[0])
-
-  console.log(people)
+  people.sort((a, b) => a[0] !== b[0] ? b[0] - a[0] : a[1] - b[1])
 
   // Iterate over array
   for (let i = 0; i < people.length; i++) {
